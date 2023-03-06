@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.img-wrapper {
+    position: relative;
+    background: linear-gradient(180deg, rgb(154, 85, 223), rgb(84 103 255));
+}
+
+.iphone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+}
+
+.iphone img {
+    max-width: 100%;
+}
+
+.iphone .screen {
+    position: absolute;
+    content: '';
+    top: 12px;
+    right: 15px;
+    left: 15px;
+    bottom: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.iphone .screen img {
+    border-radius: 30px;
+}
+
+@media screen and (max-width: 720px) {
+    section {
+        padding: 1rem 0;
+        min-height: 100vh;
+        height: auto;
+        width: 100%;
+    }
+
+    .iphone {
+        width: 240px;
+    }
+
+    .iphone .screen {
+        top: 10px;
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        border-radius: 20px;
+    }
+
+    .iphone .screen img {
+        border-radius: 20px;
+    }
+}
